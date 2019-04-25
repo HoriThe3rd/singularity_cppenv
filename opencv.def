@@ -1,1 +1,13 @@
 # Singularity container definition file for C++ with OpenCV environment
+BootStrap: docker
+From: ubuntu:18.04
+
+%files
+    /vagrant/install_opencv.sh /usr/local/src
+
+%post
+    bash /usr/local/src/install_opencv.sh
+
+%labels
+    Author HoriThe3rd
+    Version v0.0.1
