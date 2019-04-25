@@ -66,3 +66,8 @@ cmake -DCMAKE_BUILD_TYPE=Release \
     -DEIGEN_INCLUDE_PATH=../../eigen/eigen3.3.5/ \
     ..
 make -j2 && make install && ldconfig
+
+# Cleanup
+apt remove --purge -y wget git
+apt autoremove -y
+apt clean
